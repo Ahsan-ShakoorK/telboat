@@ -18,7 +18,7 @@ TELEGRAM_BOT_TOKEN = "8085545311:AAGF8Ozao7crfEtwk0ep6ikQhf61vlyGmag"
 OPENAI_API_KEY = "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"
 
 # Load your dataset
-with open("latoken_data.json", "r", encoding="utf-8") as f:
+with open("data/latoken_data.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 # Initialize the RAG system
