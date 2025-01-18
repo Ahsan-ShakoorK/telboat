@@ -87,5 +87,7 @@ The `latoken_data.json` file contains:
 The data is used by the RAG system to generate accurate and context-aware responses.
 
 ---
-
+- FAISS: Efficiently retrieves relevant data by searching dense embeddings of the text data.
+- SentenceTransformer: Generates dense vector embeddings for both the query and the dataset.
+- OpenAI GPT: Generates human-like responses using retrieved data as context.
 
