@@ -1,3 +1,4 @@
+import os
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import (
     ApplicationBuilder, CommandHandler, MessageHandler, filters,
@@ -11,11 +12,13 @@ import json
 ASKING_QUESTION = 1
 TAKING_TEST = 2
 
-# Replace with your Telegram bot token
-TELEGRAM_BOT_TOKEN = "8085545311:AAGF8Ozao7crfEtwk0ep6ikQhf61vlyGmag"
+# Load tokens from environment variables
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 
-# Replace with your OpenAI API key
-OPENAI_API_KEY = "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"
+# Check if tokens are set
+if not TELEGRAM_BOT_TOKEN or not OPENAI_API_KEY:
+    raise ValueError("Telegram bot token or OpenAI API key is missing!")
 
 # Load your dataset
 with open("data/latoken_data.json", "r", encoding="utf-8") as f:
