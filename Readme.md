@@ -1,5 +1,6 @@
 # LATOKEN Bot Project
 @Ahsan_latoken_bot
+- Need openai key to work Ragsystem
 ## Overview
 This project implements a Telegram bot for LATOKEN, enabling users to interact with the LATOKEN platform's principles, vision, and hackathon information. The bot supports:
 
